@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.D CYBER CAFE - P.F. Solutions</title>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --primary-dark: #092c4c;
+            --accent: #25d366;
+            --secondary: #f4f7f6;
+            --text-main: #333333;
+            --text-light: #555555;
+            --white: #ffffff;
+            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: #e67e22;
+        }
+
+        .nav-contact a {
+            text-decoration: none;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+        }
+
+        .nav-contact a:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #dbe4ee;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background-color: #e67e22;
+            color: var(--white);
+        }
+
+        .btn-wa {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #e67e22;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--primary);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary-dark);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.6rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Contact Details Card */
+        .contact-box {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border-bottom: 4px solid #e67e22;
+        }
+
+        .contact-box h2 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin: 1rem 0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: #dbe4ee;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .phone-number {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">K.D <span>Cyber Cafe</span></div>
+            <div class="nav-contact">
+                <a href="tel:9909053301">📞 9909053301</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Complete P.F. Solutions</h1>
+        <p>Expert assistance for all EPFO Provident Fund withdrawal claims, KYC corrections, transfer issues, and account problems.</p>
+        <div class="hero-buttons">
+            <a href="tel:9909053301" class="btn btn-call">📞 Call: 9909053301</a>
+            <a href="https://wa.me/919909053301?text=Hello%20K.D%20Cyber%20Cafe,%20I%20need%20help%20with%20my%20PF%20service." target="_blank" class="btn btn-wa">💬 Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- PF Services Section -->
+    <div class="container">
+        <h2 class="section-title">All P.F. Services Available Here</h2>
+        
+        <div class="grid">
+            <!-- Card 1: Withdrawals -->
+            <div class="card">
+                <h3>PF Withdrawal & Claims</h3>
+                <ul>
+                    <li>Full PF Final Settlement (Form 19)</li>
+                    <li>Pension Fund Claim (Form 10C)</li>
+                    <li>Advance PF Claim (Form 31)</li>
+                    <li>Emergency / Medical PF Withdrawal</li>
+                    <li>Claim Tracking & Status Check</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: KYC & Details Update -->
+            <div class="card">
+                <h3>KYC & Profile Corrections</h3>
+                <ul>
+                    <li>Bank Account KYC Addition & Approval</li>
+                    <li>Aadhaar & PAN Card Seeding</li>
+                    <li>Name, Father Name & DOB Correction</li>
+                    <li>Mobile Number & Email Update</li>
+                    <li>Joint Declaration Form Processing</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Account Transfer & Problem Solving -->
+            <div class="card">
+                <h3>Transfers & Technical Solutions</h3>
+                <ul>
+                    <li>Old PF to New PF Transfer (Form 13)</li>
+                    <li>Mark Date of Exit (Exit Date Update)</li>
+                    <li>UAN Activation & Password Reset</li>
+                    <li>Solve Rejected & Pending Claims</li>
+                    <li>EPFiGMS Grievance Registration</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h2>Any P.F. Solution at K.D Cyber Cafe</h2>
+            <p>Facing trouble with your PF account? Contact us directly for immediate help.</p>
+            <a href="tel:9909053301" class="phone-number">📞 9909053301</a>
+            <p><strong>Available:</strong> Monday – Saturday (9:00 AM – 8:00 PM)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; K.D CYBER CAFE. All Rights Reserved. | Dedicated P.F. Assistance</p>
+    </footer>
+
+</body>
+</html>
